@@ -1,0 +1,18 @@
+
+<div class="title-bar">
+    {% load static %}
+    <a href="{% url 'index' %}"><img src="{% static 'images/SAMIZZO VENTURES-LOGO.png' %}" alt="Logo" id="logo"></a>
+    <div class="name-slogan">
+        <p>{{page}}</p>
+    </div>
+</div>
+<nav>
+    <button class="drop-menu" id="drop-menu"><i class="fas fa-bars fa-2x" id= "bar"></i></i></button>
+    <ul>
+        <li><a href="{% url 'index' %}">Home </a></li>
+        <li><a href="{% url 'portfolio' %}">About </a></li>
+	<li><a href="#">Projects </a></li>
+	<li><a href="#">Blog </a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+    </ul>
+</nav>

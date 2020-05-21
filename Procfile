@@ -1,0 +1,1 @@
+web: gunicorn samizzoventure.wsgi --log-file -

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta description="Samizzo Ventures, Django, Technology, Social Impact, Help, Community">
+    <title>{% block title %} {{page}} {% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="shortcut icon" href="{% static 'images/SAMIZZO VENTURES-LOGO.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <p class="top-bar"><span>{{phone1}} | {{phone2}} | {{mail1}}</span></p>
+    <header>
+        {% include "header.html" %}
+    </header>
+    <main>
+        <section class="side-bar">
+            <div class="recent">
+                <p>awesome deals</p>
+
+            </div>
+            <div class="twitter">
+               <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/njugunahm?ref_src=twsrc%5Etfw">Tweets by njugunahm</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+             </div>
+        </section>
+        <section class="content"> 
+            {% block content %}
+            {% endblock %}       
+        </section>
+    </main>
+    <footer>
+        {% include "footer.html" %}
+    </footer>
+
+</body>
+<script src="{% static 'js/main.js' %}"></script>
+</html>

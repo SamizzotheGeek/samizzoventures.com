@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h3 id="title">OUR TEAM</h3>
+<div class="team">
+    <div class="employee">
+    {% for employee in team %}
+    <img src="media/{{employee.profile}}" alt="{{employee.name}}">
+    <h3 class="name">{{employee.name}}</h3>
+    <p class="bio">{{employee.short_bio}}</p>
+    {% endfor %}
+    </div>
+</div>
+{%endblock%}
