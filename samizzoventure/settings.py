@@ -24,7 +24,7 @@ SECRET_KEY = '!a*_@vq^r#w%elbspmzhv5@k0*n@yhvyc8b)vn!#2fzk=b5ouv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['samizzoventures.com','127.0.0.1','samizzoventures.herokuapp.com']
+ALLOWED_HOSTS = ['samizzoventures.com','127.0.0.1','samizzoventures.herokuapp.com','www.samizzoventures.co.ke']
 
 
 # Application definition
