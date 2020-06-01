@@ -8,12 +8,7 @@ from . import models
 # Create your views here.
 def index(request):
     name = 'SAMIZZO VENTURES'
-    carousel1= "We value your health, stay safe"
-    carousel2 = "All the family moments, captures in vivid shots"
-    carousel3 = 'What is more valuable than celebrating true love, Uncle S Studio Freezes these moments for you'
-    carousel4 = "We make all you memories count"
-    #context= {'name':name}
-    return render(request, 'index.html',{'page':name, 'carousel1':carousel1, 'carousel2':carousel2,'carousel3':carousel3,'carousel4':carousel4})
+    return render(request, 'index.html',{'page':name})
 
 def contact(request):
     name = "Contact Us"
@@ -38,8 +33,8 @@ def contact(request):
             }
             content = template.render(context)
 
-            email = EmailMessage("New contact form submission",content,"info@samizzoventures.com" +'',
-                ['info@samizzoventures.com'],
+            email = EmailMessage("New contact form submission",content,"info@samizzoventures.co.ke" +'',
+                ['info@samizzoventures.co.ke'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()
@@ -48,8 +43,13 @@ def contact(request):
 
 
 
-def Employees(request):
-    Employees = models.Employees
+def Members(request):
+    Members = models.Team
     page = 'About Us'
-    e_list = Employees.objects.all()
-    return render(request, 'portfolio.html', {'team':e_list,})
+    m_list = Members.objects.all()
+    desc = open('home/description.txt')
+    description = desc.read()
+    desc.close()
+    return render(request, 'about.html', {'team':m_list,'description':description, 'page':page})
+
+    

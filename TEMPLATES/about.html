@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<article>
+    <h2>{{page}}</h2>
+    {{description}}
+    <section>
+        <h3 id="title">OUR TEAM</h3>
+        <div class="team">
+        <div class="members">
+         {% for member in team %}
+        <img src="media/{{member.profile}}" alt="{{member.name}}">
+        <h3 class="name">{{member.name}}</h3>
+        <p class="bio">{{member.short_bio}}</p>
+         {% endfor %}
+         </div>
+        </div>
+    </section>
+</article>
+</div>
+{% endblock %}
