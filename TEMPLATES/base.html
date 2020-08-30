@@ -22,6 +22,11 @@
         {% include "header.html" %}
     </header>
     <main>
+        <section id="slider">
+            slider here
+            <img src="{% static 'images/perfomance.png' %}" alt="pf" >
+        </section>
+        <section data-block="services" id="buttons">
         <section class="side-bar">
             <div class="recent">
                 <p>recent posts</p>
@@ -35,6 +40,7 @@
             {% block content %}
             {% endblock %}       
         </section>
+        </section> 
     </main>
     <footer>
         {% include "footer.html" %}

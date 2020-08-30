@@ -16,7 +16,8 @@ nav ul li {list-style-type: none; padding: 0 1em 0 1em; }
 #back {position: absolute;float: left; top: 50%;font-weight: bolder !important;color:purple !important;}
 #forward {position: absolute;float: right; top: 50%; right:0px;font-weight: bolder;color:purple !important;}
 .contact-list {display: flex; flex-wrap: wrap; background-color:orange; color: #000045;padding-top: 10px;justify-content: space-around;}
-main {display: flex !important;}
+main {display: flex !important; flex-direction: column;}
+#buttons {flex: 1; display: flex; flex-direction: row;}
 .side-bar {flex:1; background-color: rgb(142, 218, 214);}
 .content {flex: 3;}
 .recent{ color: #7c19be; font-weight: bold;}
