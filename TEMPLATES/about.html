@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 <article>
-    <h2>{{page}}</h2>
-    {{description}}
-    <section>
+    <h2>Why Samizzo Ventures</h2>
+    {{description | linebreaks}}
+    <section data-about-type="team">
         <h3 id="title">OUR TEAM</h3>
         <div class="team">
         <div class="members">
@@ -17,5 +17,5 @@
         </div>
     </section>
 </article>
-</div>
+
 {% endblock %}
