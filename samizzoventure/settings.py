@@ -24,7 +24,7 @@ SECRET_KEY = '!a*_@vq^r#w%elbspmzhv5@k0*n@yhvyc8b)vn!#2fzk=b5ouv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['samizzoventures.com','127.0.0.1','samizzoventures.herokuapp.com','www.samizzoventures.co.ke']
+ALLOWED_HOSTS = ['samizzoventures.com','127.0.0.1','samizzoventures.herokuapp.com','samizzoventures.co.ke']
 
 
 # Application definition
@@ -78,8 +78,13 @@ WSGI_APPLICATION = 'samizzoventure.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+       'NAME':'kenyaadmin_samizzoventures',
+       'USER':'kenyaadmin_samizzothegeek',
+       'PASSWORD':'@Samizzo8',
+       'HOST':'localhost',
+       'POST':'5432',
+      'ATOMATIC_REQUESTS':True,
     }
 }
 
@@ -137,7 +142,8 @@ DATABASES['default'].update(prod_db)
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'info@samizzoventures.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'samizzographics@gmail.com'
+EMAIL_HOST_PASSWORD = 'g33kworld'
