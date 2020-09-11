@@ -35,9 +35,9 @@ form p {display: flex; flex-direction: column; max-width: 90%; margin: 2%; }
     main {display: flex; flex-direction: column;max-width: 94%;}
     .side-bar{ order:2; min-width: 100% !important;}
     .name-slogan {display: none;}
-    .drop-menu {display: block; position: absolute; right: 1em;top:0.2em}
-    nav ul {display:none; min-width: 100%;min-height: 8em; background-color: #777;
-        position: absolute; right: 1em; top: 3em; z-index: 9; flex-direction: column;justify-content: space-between; }
+    .drop-menu {display: block; position: absolute; right: 1em;top:0.5em}
+    nav ul {display:none; min-width: 100%;min-height: 8em; background-color: #000;
+        position: absolute; top: 5em; z-index: 9; flex-direction: column;justify-content: space-between; }
     nav ul li {padding-left:3em ; margin: 1em 0 1em 0;}
     .services {display: flex; flex-direction: column !important;}
     .studio-photography, .outdoor-photography, .event-coverage {max-width: 94%;}
