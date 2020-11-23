@@ -33,15 +33,13 @@ def contact(request):
             }
             content = template.render(context)
 
-            email = EmailMessage("New contact form submission",content,"info@samizzoventures.co.ke" +'',
+            email = EmailMessage("New contact form submission",content,"samizzographics@gmail.com" +'',
                 ['info@samizzoventures.co.ke'],
                 headers = {'Reply-To': contact_email }
             )
             email.send()
             return redirect('contact')
     return render(request, 'contact.html', {'page':name, 'form':form})
-
-
 
 def Members(request):
     Members = models.Team

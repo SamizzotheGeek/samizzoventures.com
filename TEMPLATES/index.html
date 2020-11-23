@@ -1,5 +1,69 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block slider %}
+<div class="slider">
+    <div id="shurle" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#shurle" data-slide-to="0" class="active"></li>
+        <li data-target="#shurle" data-slide-to="1"></li>
+        <li data-target="#shurle" data-slide-to="2"></li>
+        <li data-target="#shurle" data-slide-to="3"></li>
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/earth-movers-1.jpg' %}" alt="earth movers">
+          <div class="carousel-caption">
+            <h6>{{carousel}}</h6>
+            <div class="wrapper">
+              <p id="desc">Customer preference comes first, allowing us to provide satistactory services without compromising quaity </p>
+            </div>          
+          </div>
+        </div>
+    
+        <div class="carousel-item">
+          <img src="{% static 'images/graphics.jpg' %}" alt="background abstract">
+          <div class="carousel-caption">
+            <h6>{{carousel}}</h6>
+            <div class="wrapper">
+              <p id="desc"> We create Graphics that deliver just the right message</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="carousel-item">
+          <img src="{% static 'images/car-interior.jpg' %}" alt="car interior">
+          <div class="carousel-caption">
+            <h6>{{carousel}}</h6>
+            <div class="wrapper">
+              <p id="desc"> We provide executive sedans, saloon cars, compact 4X4s, SUVs full-size cars, buses, vans, minivans, classic cars, limousines and more.</p>
+            </div>            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/cars.jpg' %}" alt="cars in showroom">
+          <div class="carousel-caption">
+            <h6>{{carousel}}</h6>            
+          </div>
+        </div>
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#shurle" data-slide="prev">
+        <span id="back"><i class="fas fa-chevron-circle-left"></i></span>
+        
+      </a>
+      <a class="carousel-control-next" href="#shurle" data-slide="next">
+        <span id="forward"><i class="fas fa-chevron-circle-right"></i></span>
+        
+      </a>
+    </div>
+    
+  </div>
+{% endblock %}
 {% block content %}
 
 {% endblock %}
